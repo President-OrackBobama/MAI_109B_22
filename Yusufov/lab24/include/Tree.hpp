@@ -9,7 +9,7 @@ class Tree{
 public:
 
     Tree();
-    Tree(std::string&);
+    Tree(const std::string& infStr);
 
     bool isOperator(char) const;
     size_t getPriority(char) const;

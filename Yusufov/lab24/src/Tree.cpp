@@ -1,12 +1,7 @@
 #include "../include/Tree.hpp"
 
-Tree::Tree(){
-    std::cin >> this->infStr;
-}
+Tree::Tree(const std::string& infStr) : infStr(infStr){}
 
-Tree::Tree(std::string& expression){
-    this->infStr = expression;
-}
 
 bool Tree::isOperator(char simbol) const{
     return (simbol == '-' || simbol == '+' || simbol == '*' || simbol == '/' || simbol == '^');
