@@ -1,11 +1,17 @@
 #ifndef TABLE_HPP
 #define TABLE_HPP
 #include "../../KP7/include/Vector.hpp"
-#include "TableEntry.hpp"
+
 
 class Table {
 public:
+    struct TableEntry {
+        int key;
+
+        TableEntry(int k): key(k) {};
+    };
     Vector<TableEntry> entries;
+    
     void addEntry(int key);
     void quickSort(int low, int high);
     int searchByKey(int key) const;
